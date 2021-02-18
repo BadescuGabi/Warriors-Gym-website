@@ -1,0 +1,39 @@
+ <header>
+        <img class="fav" src="img/favicon1.png" alt="sport backround" style="float: left; width: 3%; height: 3%;">
+        <h1>Warriors Gym </h1>
+        <!--vreau să adaug logo ul lângă titlu-->
+        <nav>
+            <ul class="menu">
+                <li><a href="/index">Acasa</a></li>
+                <li><a href="/Galerie">Galerie</a>
+                </li>
+                <li><a>Orar si tarife</a>
+                    <ul class="submenu">
+                        <li> <a href="/tarife_fitness">Tarif fitness</a></li>
+                        <li> <a href="/tarife_zumba_pilates">Tarif zumba si pilates </a></li>
+                        <li> <a href="/orar">Orar</a></li>
+                        <li> <a href="/abonatii">Abonati</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <% if (!locals.username) { %>
+        <form style="top: 10px;" id="login" method="post" action="/login" >
+            <label>
+                Username: <input type="text" name="username" >
+                <button type="button" onclick="location.href = '/inreg';"> Inregistrare </button>
+            </label>
+            <label id="pass">
+                Parola: <input type="password" name="parola" >
+            </label>
+            
+            <input type="submit" value="Login">
+          
+        </form>
+        <% } else { %>
+            <div class="out">
+          <p>  Bine ai venit, <%= locals.username %>!</p>
+            <a href="/logout">Logout</a>
+        </div>
+            <% } %>
+    </header>

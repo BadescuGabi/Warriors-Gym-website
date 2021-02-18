@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Warriors Gym</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, inițial-scale=1.0">
+    <meta name="keywords" content="Gym,sală sport,Bucureșți,fitness,ieftin,noi,acum">
+    <meta name="description" content="Prezentare sala de fitness Warriors Gym Bucuresti">    <!-- <meta http-equiv="refresh" content="30"> -->
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css_files/css_pag1.css">
+    <link rel="stylesheet" href="css_files/general.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noticia+Text&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css_files/querry_idex.css">
+    <link rel="stylesheet" href="css_files/abonati.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script  src="js_files/anim.js"></script>
+    <script  src="js_files/script.js"></script>
+    <script src="js_files/ejs.min.js"></script>
+</head>
+
+<body class="fundal1">
+    <%-  include('../fragmente/header')  %> 
+
+    <main id="ma">
+        <div class="bg-image">
+            <img src="img/backround2.jpg" alt="backround" style="height: 100%; width: 100%;">
+        </div>
+        <h2 id="bg-text"  > ABONATI! </h2>
+            <!-- aici se va afisa continutul neprocesat al JSON-ului -->
+            <div id="ravas">
+            </div>
+            <div class="afis" id="afisJson">
+        </div>
+        	<!-- aici se va afisa continutul JSON-ului cu formatul din template-ul definit in script -->
+            <button id="sort_inaltime"> Sorteaza dupa inaltime+ id</button>
+        <button id="medie"> Inaltimea medie </button>
+        <button id="reset"> Resetare abonati </button>
+        <button id="afis_ind"> Afisare individuala </button>
+        <button id="reset_loc">Reseteaza storage</button>
+        <button id="ster">Sterge dubluri</button>
+        <button id="sort_gen">Sterge camp gol</button>
+        <br/>
+        <p>
+            <label id="aa">
+                Filtrare descriere:<br/> <input type="radio" id="a1" name="obiective" value="muncitoare" >
+                <label for="goals" id="a2" style="font-size: small;font-weight: normal; color: aliceblue;">muncitoare</label><br>
+                <input type="radio" id="a3" name="obiective" value="crestere" >
+                <label for="goals" id="a4" style="font-size: small;font-weight: normal;">lenes</label><br>
+                <input type="radio" id="a5" name="obiective" value="mentinere" ">
+                <label for="goals" id="a6" style="font-size: small;font-weight: normal;">puternic</label><br>
+            </label>
+            </p>
+            <div class="afis" id="afisTemplate">
+        </div>
+        <p>
+            <label style="color: wheat;">
+                Calculator varsta: <br/><input type="text" name="nume" id="txt" placeholder=YYYY/MM/DD" size="50">
+            </label>
+            </p>
+            <button id="calc"> Afisare individuala </button>
+            <p id="rez"></p>
+    </main>
+    <%- include('../fragmente/footer')  %>
+</body>
+
+</html>

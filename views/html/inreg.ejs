@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Warriors Gym</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, inițial-scale=1.0">
+    <meta name="keywords" content="Gym,sală sport,Bucureșți,fitness,ieftin,noi,acum">
+    <meta name="description" content="Prezentare sala de fitness Warriors Gym Bucuresti">    <!-- <meta http-equiv="refresh" content="30"> -->
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css_files/css_pag1.css">
+    <link rel="stylesheet" href="css_files/general.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noticia+Text&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css_files/querry_idex.css">
+    <link rel="stylesheet" href="css_files/404.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script  src="js_files/check.js"></script>
+</head>
+
+<body class="fundal1">
+    <%-  include('../fragmente/header')  %> 
+
+    <main>
+        <div class="bg-image">
+            <img src="img/backround2.jpg" alt="backround" style="height: 100%; width: 100%;">
+        </div>
+      
+        <!--    <% if(!locals.rsstatus) { %><!-- verific daca status e definit-->-->
+            <form method="post" class="date" action="/inreg">
+                <p id="titlu">Formular de inregistrare!<br/> </p>
+                <p>
+                <label>
+                    Username:<br/> <input type="text" name="username"  placeholder="ex: Ion973" size="50">
+                </label>
+                </p>
+                <p>
+                <label>
+                    Nume: <br/><input type="text" name="nume"  placeholder="ex: Ion" size="50">
+                </label>
+                </p>
+                <p>
+                    <label>
+                       Telefon: <br/><input type="tel" id="phone" name="phone" placeholder="0755279031" size="50">
+                    </label>
+                    </p>
+                <p>
+                <label>
+                    
+                    Obiective:<br/> <input type="checkbox" id="slabit" name="obiective" value="Slabit" onclick="ch(this)">
+                    <label for="goals" style="font-size: small;font-weight: normal;">pierdere in greutate</label><br>
+                    <input type="checkbox" id="ingrasat" name="obiective" value="crestere" onclick="ch(this)">
+                    <label for="goals" style="font-size: small;font-weight: normal;">crestere in greutate/masa musculara</label><br>
+                    <input type="checkbox" id="mentinut" name="obiective" value="mentinere" onclick="ch(this)">
+                    <label for="goals" style="font-size: small;font-weight: normal;">mentinere</label><br>
+                </label>
+                </p>
+                <p>
+                <label>
+                    Parola: <br/><input type="password" name="parola" size="50">
+                </label>
+                </p>
+                <p>
+                <label>
+                    Reintroduceti parola: <br/><input type="password" name="rparola" size="50">
+                </label>
+                </p>
+                <p>
+                <label>
+                    Email: <br/><input type="email" name="email" size="50" placeholder="gigelescu@gmail.com">
+                </label>
+                </p>
+                <p>		
+                <input style="margin-left: 35%; padding-top: 2px; padding-bottom: 2px;margin-top: 15px;" type="submit" value="Submit">
+                </p>
+            </form>
+      <!--      <% } else if(rsstatus=="ok"){ %>
+                <p>Date introduse</p>
+            <% } else {%>
+                <p>Eroare</p>
+            <% } %>
+            -->
+    </main>
+    
+    <%- include('../fragmente/footer')  %>
+    
+</body>
+</html>

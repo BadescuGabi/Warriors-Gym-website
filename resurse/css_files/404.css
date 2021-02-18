@@ -1,0 +1,44 @@
+footer{
+    
+    position: absolute;
+    bottom :0px;
+}
+
+h2.bg-text{
+    font-size: 3rem;
+    color: red;
+    margin-top: 150px;
+}
+
+main>p{
+    position: static;
+    margin-top: 300px;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.date{
+    margin-top: 6vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 6vw;
+    padding-right: 6vw;
+    right: 33%;
+    bottom: 14.75%;
+    box-sizing: border-box;
+    background-color: rgba(196, 187, 187, 1);
+    border-radius: 10vh;
+    opacity: 0.8;
+}
+
+#titlu{
+    color: black;
+    font-size: x-large;
+    font-weight: bolder;
+    text-align: center;
+}
+
+input[type=tel], input[type=email]
+{
+border-radius: 25px;
+}
